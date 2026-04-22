@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "repo": "exp-llm-chat-runtime-shootout",
+    "commit": "a90ec7c",
+    "timestamp": "2026-04-22T07:23:46.917Z",
+    "owner": "ai-webgpu-lab",
+    "track": "llm",
+    "scenario": "runtime-profile-webllm-style-webgpu",
+    "notes": "synthetic runtime profile=WebLLM-style; promptTokens=17; outputTokens=54; executionMode=webgpu; backend=webgpu; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-04-22T07:23:47.033Z",
+      "captured_by": "zzragida"
+    }
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 16,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "synthetic-webgpu-profile",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "runtime-readiness-chat",
+    "input_profile": "prompt-17-output-54",
+    "model_id": "webllm-style",
+    "context_tokens": 17,
+    "output_tokens": 54
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 724.1,
+      "init_ms": 90.3,
+      "success_rate": 1,
+      "peak_memory_note": "16 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 22.4,
+      "prefill_tok_per_sec": 596.49,
+      "decode_tok_per_sec": 133.96,
+      "turn_latency_ms": 521.9
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-webllm-style-webgpu.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-llm-chat-runtime-shootout/",
+    "screenshots": [
+      "./reports/screenshots/01-webllm-style-webgpu.png"
+    ]
+  }
+}

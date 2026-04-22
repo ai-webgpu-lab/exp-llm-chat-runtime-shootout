@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "repo": "exp-llm-chat-runtime-shootout",
+    "commit": "a90ec7c",
+    "timestamp": "2026-04-22T07:24:20.156Z",
+    "owner": "ai-webgpu-lab",
+    "track": "llm",
+    "scenario": "runtime-profile-webllm-style-fallback",
+    "notes": "synthetic runtime profile=WebLLM-style; promptTokens=17; outputTokens=54; executionMode=fallback; backend=wasm; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-04-22T07:24:20.360Z",
+      "captured_by": "zzragida"
+    }
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 16,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "wasm-fallback-simulated",
+      "required_features": [],
+      "limits": {}
+    },
+    "backend": "wasm",
+    "fallback_triggered": true,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "runtime-readiness-chat",
+    "input_profile": "prompt-17-output-54",
+    "model_id": "webllm-style",
+    "context_tokens": 17,
+    "output_tokens": 54
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1242,
+      "init_ms": 167.2,
+      "success_rate": 1,
+      "peak_memory_note": "16 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 52.2,
+      "prefill_tok_per_sec": 290.6,
+      "decode_tok_per_sec": 57.4,
+      "turn_latency_ms": 1166.4
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/03-webllm-style-fallback.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-llm-chat-runtime-shootout/",
+    "screenshots": [
+      "./reports/screenshots/03-webllm-style-fallback.png"
+    ]
+  }
+}

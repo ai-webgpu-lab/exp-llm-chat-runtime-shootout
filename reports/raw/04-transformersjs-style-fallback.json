@@ -1,18 +1,18 @@
 {
   "meta": {
     "repo": "exp-llm-chat-runtime-shootout",
-    "commit": "c88eb5d",
-    "timestamp": "2026-04-22T06:13:19.774Z",
+    "commit": "a90ec7c",
+    "timestamp": "2026-04-22T07:24:36.087Z",
     "owner": "ai-webgpu-lab",
     "track": "llm",
-    "scenario": "runtime-profile-webllm-style",
-    "notes": "synthetic runtime profile=WebLLM-style; promptTokens=17; outputTokens=54; automation=playwright-chromium",
+    "scenario": "runtime-profile-transformersjs-style-fallback",
+    "notes": "synthetic runtime profile=Transformers.js-style; promptTokens=17; outputTokens=54; executionMode=fallback; backend=wasm; automation=playwright-chromium",
     "capture_context": {
       "tool": "playwright-chromium",
       "browser_name": "Chromium",
       "browser_version": "147.0.7727.15",
       "headless": true,
-      "captured_at": "2026-04-22T06:13:19.883Z",
+      "captured_at": "2026-04-22T07:24:36.211Z",
       "captured_by": "zzragida"
     }
   },
@@ -33,46 +33,46 @@
       "power_mode": "unknown"
     },
     "gpu": {
-      "adapter": "profile-driven",
+      "adapter": "wasm-fallback-simulated",
       "required_features": [],
       "limits": {}
     },
-    "backend": "webgpu",
-    "fallback_triggered": false,
-    "worker_mode": "worker",
+    "backend": "wasm",
+    "fallback_triggered": true,
+    "worker_mode": "main",
     "cache_state": "warm"
   },
   "workload": {
     "kind": "llm-chat",
     "name": "runtime-readiness-chat",
     "input_profile": "prompt-17-output-54",
-    "model_id": "webllm-style",
+    "model_id": "transformersjs-style",
     "context_tokens": 17,
     "output_tokens": 54
   },
   "metrics": {
     "common": {
-      "time_to_interactive_ms": 1278.6,
-      "init_ms": 90.6,
+      "time_to_interactive_ms": 1334.5,
+      "init_ms": 111.2,
       "success_rate": 1,
       "peak_memory_note": "16 GB reported by browser",
       "error_type": ""
     },
     "llm": {
-      "ttft_ms": 22.2,
-      "prefill_tok_per_sec": 582.19,
-      "decode_tok_per_sec": 51.8,
-      "turn_latency_ms": 1162.2
+      "ttft_ms": 40.1,
+      "prefill_tok_per_sec": 364.03,
+      "decode_tok_per_sec": 49.33,
+      "turn_latency_ms": 1252.6
     }
   },
   "status": "success",
   "artifacts": {
     "raw_logs": [
-      "./reports/logs/01-webllm-style.log"
+      "./reports/logs/04-transformersjs-style-fallback.log"
     ],
     "deploy_url": "https://ai-webgpu-lab.github.io/exp-llm-chat-runtime-shootout/",
     "screenshots": [
-      "./reports/screenshots/01-webllm-style.png"
+      "./reports/screenshots/04-transformersjs-style-fallback.png"
     ]
   }
 }
