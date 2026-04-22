@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "repo": "exp-llm-chat-runtime-shootout",
+    "commit": "c88eb5d",
+    "timestamp": "2026-04-22T06:13:19.774Z",
+    "owner": "ai-webgpu-lab",
+    "track": "llm",
+    "scenario": "runtime-profile-webllm-style",
+    "notes": "synthetic runtime profile=WebLLM-style; promptTokens=17; outputTokens=54; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-04-22T06:13:19.883Z",
+      "captured_by": "zzragida"
+    }
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 16,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "profile-driven",
+      "required_features": [],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "runtime-readiness-chat",
+    "input_profile": "prompt-17-output-54",
+    "model_id": "webllm-style",
+    "context_tokens": 17,
+    "output_tokens": 54
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1278.6,
+      "init_ms": 90.6,
+      "success_rate": 1,
+      "peak_memory_note": "16 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 22.2,
+      "prefill_tok_per_sec": 582.19,
+      "decode_tok_per_sec": 51.8,
+      "turn_latency_ms": 1162.2
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-webllm-style.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-llm-chat-runtime-shootout/",
+    "screenshots": [
+      "./reports/screenshots/01-webllm-style.png"
+    ]
+  }
+}
