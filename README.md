@@ -40,9 +40,14 @@
 - Repository scaffold initialized
 - Shared result schema copied to `schemas/ai-webgpu-lab-result.schema.json`
 - Shared reporting template copied to `RESULTS.md`
-- GitHub Pages baseline probe copied to `public/index.html`
-- Browser probe logic copied to `public/app.js`
+- Repo-specific Pages baseline copied from `repo-scaffolds/p0/exp-llm-chat-runtime-shootout/`
+- Generated entry point updated in `public/index.html` and related assets
 - GitHub Pages workflow copied to `.github/workflows/deploy-pages.yml`
+
+## 현재 baseline 상태
+- Repository-specific runnable baseline active: interactive runtime readiness harness comparing deterministic WebLLM-style and Transformers.js-style chat profiles
+- Generated override source: `repo-scaffolds/p0/exp-llm-chat-runtime-shootout/`
+- Results/report scaffold is ready to promote exported JSON into `reports/raw/` and `RESULTS.md`
 
 ## GitHub Pages 운영 메모
 - Pages URL: https://ai-webgpu-lab.github.io/exp-llm-chat-runtime-shootout/
