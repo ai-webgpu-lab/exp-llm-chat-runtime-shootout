@@ -2,8 +2,8 @@
 
 ## 1. 실험 요약
 - 저장소: exp-llm-chat-runtime-shootout
-- 커밋 해시: a90ec7c
-- 실험 일시: 2026-04-22T07:23:46.917Z -> 2026-04-22T07:24:36.087Z
+- 커밋 해시: 0180fd7
+- 실험 일시: 2026-05-20T15:41:42.612Z -> 2026-05-20T15:42:25.915Z
 - 담당자: ai-webgpu-lab
 - 실험 유형: `llm`
 - 상태: `success`
@@ -26,7 +26,7 @@
 - 장치명: Linux x86_64
 - device class: `desktop-high`
 - CPU: 16 threads
-- 메모리: 16 GB
+- 메모리: 32 GB
 - 전원 상태: `unknown`
 
 ### GPU / 실행 모드
@@ -51,37 +51,37 @@
 
 ## 5. 측정 지표
 ### 공통
-- time_to_interactive_ms: 665.1 ~ 1334.5 ms
-- init_ms: 60.2 ~ 167.2 ms
+- time_to_interactive_ms: 623.6 ~ 1419.2 ms
+- init_ms: 60.2 ~ 169 ms
 - success_rate: 1
-- peak_memory_note: 16 GB reported by browser
+- peak_memory_note: 32 GB reported by browser
 - error_type: -
 
 ### LLM / Benchmark
-- ttft_ms: 17.3 ~ 52.2 ms
-- prefill_tok_per_sec: 290.6 ~ 752.21 tok/s
-- decode_tok_per_sec: 49.33 ~ 133.96 tok/s
-- turn_latency_ms: 521.9 ~ 1252.6 ms
+- ttft_ms: 17.1 ~ 52.2 ms
+- prefill_tok_per_sec: 291.1 ~ 762.33 tok/s
+- decode_tok_per_sec: 48.82 ~ 134.87 tok/s
+- turn_latency_ms: 518.9 ~ 1263.9 ms
 - backends: webgpu, wasm
 - fallback states: false, true
 
 ## 6. 결과 표
 | Run | Scenario | Backend | Cache | Mean | P95 | Notes |
 |---|---|---:|---:|---:|---:|---|
-| 1 | WebLLM-style / WebGPU | webgpu | warm | 133.96 | 22.4 | prefill=596.49 tok/s, metric=decode tok/s / TTFT ms |
-| 2 | Transformers.js-style / WebGPU | webgpu | warm | 112.2 | 17.3 | prefill=752.21 tok/s, metric=decode tok/s / TTFT ms |
-| 3 | WebLLM-style / Fallback | wasm | warm | 57.4 | 52.2 | prefill=290.6 tok/s, metric=decode tok/s / TTFT ms |
-| 4 | Transformers.js-style / Fallback | wasm | warm | 49.33 | 40.1 | prefill=364.03 tok/s, metric=decode tok/s / TTFT ms |
+| 1 | WebLLM-style / WebGPU | webgpu | warm | 134.87 | 22.1 | prefill=600.71 tok/s, metric=decode tok/s / TTFT ms |
+| 2 | Transformers.js-style / WebGPU | webgpu | warm | 114.29 | 17.1 | prefill=762.33 tok/s, metric=decode tok/s / TTFT ms |
+| 3 | WebLLM-style / Fallback | wasm | warm | 57.22 | 52.2 | prefill=291.1 tok/s, metric=decode tok/s / TTFT ms |
+| 4 | Transformers.js-style / Fallback | wasm | warm | 48.82 | 40.2 | prefill=364.81 tok/s, metric=decode tok/s / TTFT ms |
 
 ## 7. 관찰
-- 최고 decode throughput은 WebLLM-style / WebGPU의 133.96 tok/s였다.
+- 최고 decode throughput은 WebLLM-style / WebGPU의 134.87 tok/s였다.
 - 가장 낮은 TTFT는 Transformers.js-style / WebGPU에서 관찰됐다.
 - playwright-chromium로 수집된 automation baseline이며 headless=true, browser=Chromium 147.0.7727.15.
 - 실제 runtime/model/renderer 교체 전 deterministic harness 결과이므로, 절대 성능보다 보고 경로와 재현성 확인에 우선 의미가 있다.
 
 ## 8. WebGPU vs Fallback
-- webllm-style: decode tok/s webgpu=133.96, fallback=57.4, delta=+76.56; TTFT delta=-29.8 ms; worker worker -> main
-- transformersjs-style: decode tok/s webgpu=112.2, fallback=49.33, delta=+62.87; TTFT delta=-22.8 ms; worker main -> main
+- webllm-style: decode tok/s webgpu=134.87, fallback=57.22, delta=+77.65; TTFT delta=-30.1 ms; worker worker -> main
+- transformersjs-style: decode tok/s webgpu=114.29, fallback=48.82, delta=+65.47; TTFT delta=-23.1 ms; worker main -> main
 
 ## 9. 결론
 - runtime readiness 비교가 raw JSON과 RESULTS.md 둘 다에서 반복 가능해졌다.

@@ -1,8 +1,8 @@
 {
   "meta": {
     "repo": "exp-llm-chat-runtime-shootout",
-    "commit": "a90ec7c",
-    "timestamp": "2026-04-22T07:23:46.917Z",
+    "commit": "0180fd7",
+    "timestamp": "2026-05-20T15:41:42.612Z",
     "owner": "ai-webgpu-lab",
     "track": "llm",
     "scenario": "runtime-profile-webllm-style-webgpu",
@@ -12,9 +12,11 @@
       "browser_name": "Chromium",
       "browser_version": "147.0.7727.15",
       "headless": true,
-      "captured_at": "2026-04-22T07:23:47.033Z",
-      "captured_by": "zzragida"
-    }
+      "captured_at": "2026-05-20T15:41:42.724Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "01-webllm-style-webgpu",
+    "capture_url_search": "?mode=webgpu"
   },
   "environment": {
     "browser": {
@@ -29,7 +31,7 @@
       "name": "Linux x86_64",
       "class": "desktop-high",
       "cpu": "16 threads",
-      "memory_gb": 16,
+      "memory_gb": 32,
       "power_mode": "unknown"
     },
     "gpu": {
@@ -54,17 +56,17 @@
   },
   "metrics": {
     "common": {
-      "time_to_interactive_ms": 724.1,
-      "init_ms": 90.3,
+      "time_to_interactive_ms": 661.3,
+      "init_ms": 90.2,
       "success_rate": 1,
-      "peak_memory_note": "16 GB reported by browser",
+      "peak_memory_note": "32 GB reported by browser",
       "error_type": ""
     },
     "llm": {
-      "ttft_ms": 22.4,
-      "prefill_tok_per_sec": 596.49,
-      "decode_tok_per_sec": 133.96,
-      "turn_latency_ms": 521.9
+      "ttft_ms": 22.1,
+      "prefill_tok_per_sec": 600.71,
+      "decode_tok_per_sec": 134.87,
+      "turn_latency_ms": 518.9
     }
   },
   "status": "success",

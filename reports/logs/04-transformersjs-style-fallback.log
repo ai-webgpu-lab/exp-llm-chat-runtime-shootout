@@ -1,7 +1,7 @@
 repo=exp-llm-chat-runtime-shootout
 scenario=Transformers.js-style / Fallback
 url_search=?mode=fallback
-captured_at=2026-04-22T07:24:36.211Z
+captured_at=2026-05-20T15:42:26.067Z
 browser=Chromium 147.0.7727.15
 headless=true
 meta_scenario=runtime-profile-transformersjs-style-fallback
@@ -17,8 +17,8 @@ status=success
 {
   "meta": {
     "repo": "exp-llm-chat-runtime-shootout",
-    "commit": "a90ec7c",
-    "timestamp": "2026-04-22T07:24:36.087Z",
+    "commit": "0180fd7",
+    "timestamp": "2026-05-20T15:42:25.915Z",
     "owner": "ai-webgpu-lab",
     "track": "llm",
     "scenario": "runtime-profile-transformersjs-style-fallback",
@@ -28,9 +28,11 @@ status=success
       "browser_name": "Chromium",
       "browser_version": "147.0.7727.15",
       "headless": true,
-      "captured_at": "2026-04-22T07:24:36.211Z",
-      "captured_by": "zzragida"
-    }
+      "captured_at": "2026-05-20T15:42:26.067Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "04-transformersjs-style-fallback",
+    "capture_url_search": "?mode=fallback"
   },
   "environment": {
     "browser": {
@@ -45,7 +47,7 @@ status=success
       "name": "Linux x86_64",
       "class": "desktop-high",
       "cpu": "16 threads",
-      "memory_gb": 16,
+      "memory_gb": 32,
       "power_mode": "unknown"
     },
     "gpu": {
@@ -68,17 +70,17 @@ status=success
   },
   "metrics": {
     "common": {
-      "time_to_interactive_ms": 1334.5,
-      "init_ms": 111.2,
+      "time_to_interactive_ms": 1419.2,
+      "init_ms": 111.1,
       "success_rate": 1,
-      "peak_memory_note": "16 GB reported by browser",
+      "peak_memory_note": "32 GB reported by browser",
       "error_type": ""
     },
     "llm": {
-      "ttft_ms": 40.1,
-      "prefill_tok_per_sec": 364.03,
-      "decode_tok_per_sec": 49.33,
-      "turn_latency_ms": 1252.6
+      "ttft_ms": 40.2,
+      "prefill_tok_per_sec": 364.81,
+      "decode_tok_per_sec": 48.82,
+      "turn_latency_ms": 1263.9
     }
   },
   "status": "success",
